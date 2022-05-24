@@ -8,17 +8,52 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class StudentRegisterComponent implements OnInit {
     studentRegisterForm!: FormGroup;
+    levels: number[] = [1, 2, 3, 4];
 
     constructor(private formBuilder: FormBuilder) {}
 
     ngOnInit(): void {
         this.studentRegisterForm = this.formBuilder.group({
-            name: ['', [Validators.required, Validators.maxLength(256)]],
+            name: [
+                '',
+                [
+                    Validators.required,
+                    Validators.maxLength(256),
+                    Validators.minLength(9),
+                ],
+            ],
             email: ['', [Validators.required, Validators.email]],
-            nationalID:['', [Validators.required, Validators.pattern("^[0-9]*$")]],
-            age:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(2)]],
-            phoneNumber:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(11)]],
-            level:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(1)]],
+            nationalID: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern('^[0-9]*$'),
+                    Validators.maxLength(14),
+                    Validators.minLength(14),
+                ],
+            ],
+            age: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern('^[0-9]*$'),
+                    Validators.max(99),
+                    Validators.min(16),
+                ],
+            ],
+            phoneNumber: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern('^[0-9]*$'),
+                    Validators.maxLength(11),
+                    Validators.minLength(11),
+                ],
+            ],
+            level: [
+                '',
+                [Validators.required, Validators.min(1), Validators.max(4)],
+            ],
         });
     }
 
@@ -33,17 +68,22 @@ export class StudentRegisterComponent implements OnInit {
     get nationalID() {
         return this.studentRegisterForm.get('nationalID');
     }
-    
+
     get age() {
         return this.studentRegisterForm.get('age');
     }
-    
+
     get phoneNumber() {
         return this.studentRegisterForm.get('phoneNumber');
     }
-    
+
     get level() {
         return this.studentRegisterForm.get('level');
     }
 
+    changeLevel(e: any) {
+        this.level?.setValue(e.target.value, {
+            onlySelf: true,
+        });
+    }
 }

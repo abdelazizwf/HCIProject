@@ -1,5 +1,5 @@
-<div class="container my-3">
-    <form [formGroup]="studentRegisterForm">
+<div class="container my-3" style="max-width: 600px">
+    <form [formGroup]="studentRegisterForm" novalidate>
         <div class="form-group">
             <label for="name">Full Name</label>
             <input
@@ -8,86 +8,74 @@
                 id="name"
                 formControlName="name"
             />
-            <small
-                class="text-danger"
-                *ngIf="name && name.invalid && name.touched"
-            >
-                Please provide a valid name.
+            <small class="text-danger" *ngIf="name?.invalid && name?.touched">
+                Please Provide a Valid Name.
             </small>
         </div>
         <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="email">Email Address</label>
             <input
                 type="email"
                 class="form-control"
                 id="email"
                 formControlName="email"
             />
-            <small
-                class="text-danger"
-                *ngIf="email && email.invalid && email.touched"
-            >
-                Please provide a valid email.
+            <small class="text-danger" *ngIf="email?.invalid && email?.touched">
+                Please Provide a Valid Email.
             </small>
         </div>
         <div class="form-group">
-            <label for="nationalID">nationalID</label>
+            <label for="nationalID">National ID</label>
             <input
-                type="nationalID"
+                type="text"
                 class="form-control"
                 id="nationalID"
                 formControlName="nationalID"
             />
             <small
                 class="text-danger"
-                *ngIf="nationalID && nationalID.invalid && nationalID.touched"
+                *ngIf="nationalID?.invalid && nationalID?.touched"
             >
-                Please provide a valid nationalID.
+                Please Provide a Valid National ID.
             </small>
         </div>
         <div class="form-group">
-            <label for="age">age</label>
+            <label for="age">Age</label>
             <input
-                type="age"
+                type="number"
                 class="form-control"
                 id="age"
                 formControlName="age"
             />
-            <small
-                class="text-danger"
-                *ngIf="age && age.invalid && age.touched"
-            >
-                Please provide a valid age.
+            <small class="text-danger" *ngIf="age?.invalid && age?.touched">
+                Please Provide a Valid Age.
             </small>
         </div>
         <div class="form-group">
-            <label for="phoneNumber">phoneNumber</label>
+            <label for="phoneNumber">Phone Number</label>
             <input
-                type="phoneNumber"
+                type="text"
                 class="form-control"
                 id="phoneNumber"
                 formControlName="phoneNumber"
             />
             <small
                 class="text-danger"
-                *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"
+                *ngIf="phoneNumber?.invalid && phoneNumber?.touched"
             >
-                Please provide a valid phoneNumber.
+                Please Provide a Valid Phone Number.
             </small>
         </div>
         <div class="form-group">
-            <label for="level">level</label>
+            <label>Level</label>
             <input
-                type="level"
+                type="number"
                 class="form-control"
                 id="level"
                 formControlName="level"
             />
-            <small
-                class="text-danger"
-                *ngIf="level && level.invalid && level.touched"
-            >
-                Please provide a valid level.
+            <small class="text-danger" *ngIf="level?.invalid && level?.touched">
+                Please Choose a Valid Level.
             </small>
         </div>
         <button

@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"
+                    <a class="nav-link" routerLink="/"
                         >Home <span class="sr-only">(current)</span></a
                     >
                 </li>
@@ -63,8 +63,12 @@
                         Register
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Student</a>
-                        <a class="dropdown-item" href="#">Faculty Member</a>
+                        <a class="dropdown-item" routerLink="/studentRegister"
+                            >Student</a
+                        >
+                        <a class="dropdown-item" href="/facultyRegister"
+                            >Faculty Member</a
+                        >
                     </div>
                 </li>
             </ul>

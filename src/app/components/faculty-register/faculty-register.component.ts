@@ -13,12 +13,37 @@ export class FacultyRegisterComponent implements OnInit {
 
     ngOnInit(): void {
         this.studentRegisterForm = this.formBuilder.group({
-            name: ['', [Validators.required, Validators.maxLength(256)]],
+            name: [
+                '',
+                [
+                    Validators.required,
+                    Validators.maxLength(256),
+                    Validators.minLength(9),
+                ],
+            ],
             email: ['', [Validators.required, Validators.email]],
-            nationalID:['', [Validators.required, Validators.pattern("^[0-9]*$")]],
-            age:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(2)]],
-            phoneNumber:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(11)]],
-            faculty:['', [Validators.required]],
+            nationalID: [
+                '',
+                [Validators.required, Validators.pattern('^[0-9]*$')],
+            ],
+            age: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern('^[0-9]*$'),
+                    Validators.min(16),
+                    Validators.max(99),
+                ],
+            ],
+            phoneNumber: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern('^[0-9]*$'),
+                    Validators.maxLength(11),
+                ],
+            ],
+            faculty: ['', [Validators.required]],
         });
     }
 
@@ -33,17 +58,16 @@ export class FacultyRegisterComponent implements OnInit {
     get nationalID() {
         return this.studentRegisterForm.get('nationalID');
     }
-    
+
     get age() {
         return this.studentRegisterForm.get('age');
     }
-    
+
     get phoneNumber() {
         return this.studentRegisterForm.get('phoneNumber');
     }
-    
+
     get faculty() {
         return this.studentRegisterForm.get('faculty');
     }
-
 }
