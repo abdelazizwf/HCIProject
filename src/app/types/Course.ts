@@ -1,9 +1,9 @@
 import { Professor } from './Professor';
 
 export interface Course {
-    _data_id: number;
-    id: string;
+    id: number;
+    courseID: string;
     name: string;
-    professor: Professor;
+    professorID: number;
     creditHours: number;
 }

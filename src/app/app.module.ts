@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StudentRegisterComponent } from './components/student-register/student-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppRoutingModule,
         StudentModule,
         ReactiveFormsModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 export interface Person {
-    _data_id: number;
+    id: number;
     nationalID: number;
     name: string;
     age: number;

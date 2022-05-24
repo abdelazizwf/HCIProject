@@ -1,279 +1,364 @@
 {
-    "courses": [
-        {
-            "_data_id": 1,
-            "id": "CS50",
-            "name": "Introduction to Computer Science",
-            "professor": 1,
-            "creditHours": 4
-        },
-        {
-            "_data_id": 2,
-            "id": "PHYS101",
-            "name": "Physics 1",
-            "professor": 2,
-            "creditHours": 4
-        },
-        {
-            "_data_id": 3,
-            "id": "PSY200",
-            "name": "Humanities",
-            "professor": 3,
-            "creditHours": 3
-        },
-        {
-            "_data_id": 4,
-            "id": "ENG201",
-            "name": "English 2",
-            "professor": 3,
-            "creditHours": 4
-        },
-        {
-            "_data_id": 5,
-            "id": "ART305",
-            "name": "Creative Thinking",
-            "professor": 4,
-            "creditHours": 2
-        }
-    ],
-    "professors": [
-        {
-            "_data_id": 1,
-            "nationalID": 30110115458748,
-            "name": "Mohamed Hesham",
-            "age": 38,
-            "email": "mohamed.hesham@gmail.com",
-            "phoneNumber": "010234585877",
-            "faculty": "CS"
-        },
-        {
-            "_data_id": 2,
-            "nationalID": 30110115482448,
-            "name": "Mahmoud Mounier",
-            "age": 44,
-            "email": "mahmoud.mounier@gmail.com",
-            "phoneNumber": "01144585877",
-            "faculty": "CS"
-        },
-        {
-            "_data_id": 3,
-            "nationalID": 301101187652748,
-            "name": "Bassem Ahmed",
-            "age": 38,
-            "email": "bassem.ahmed@gmail.com",
-            "phoneNumber": "010247785877",
-            "faculty": "SC"
-        },
-        {
-            "_data_id": 4,
-            "nationalID": 30110118796748,
-            "name": "Mohamed Hesham",
-            "age": 81,
-            "email": "mohamed.hesham2@gmail.com",
-            "phoneNumber": "017234585877",
-            "faculty": "CS"
-        }
-    ],
-    "students": [
-      {
-        "_data_id": 1,
-        "nationalID": "30106870105476",
-        "name": "Ali Rafeeq",
-        "age": 20,
-        "email": "ali.rafeeq@gmail.com",
-        "phoneNumber": "01554648295",
-        "level": 1,
-        "registeredCourses": [1, 2, 3, 4, 5]
-      },
-      {
-        "_data_id": 2,
-        "nationalID": "30105110102168",
-        "name": "Ahmed Tarek",
-        "age": 20,
-        "email": "Ahmed.tarek@gmail.com",
-        "phoneNumber": "01065494523",
-        "level": 1,
-        "registeredCourses": [2, 3, 4, 5]
-      },
-      {
-        "_data_id": 3,
-        "nationalID": "301078440124597",
-        "name": "Abdulaziz Wael",
-        "age": 20,
-        "email": "Abdulaziz.farahat@gmail.com",
-        "phoneNumber": "01112334578",
-        "level": 1,
-        "registeredCourses": [1, 2, 3, 4, 5]
-      },
-      {
-        "_data_id": 4,
-        "nationalID": "30105684912305",
-        "name": "Kevin Sheriff",
-        "age": 20,
-        "email": "Kevin.Sheriff@gmail.com",
-        "phoneNumber": "01226778953",
-        "level": 1,
-        "registeredCourses": [1, 2, 3, 4]
-      },
-      {
-        "_data_id": 5,
-        "nationalID": "3010566589472",
-        "name": "Natalie Amgad",
-        "age": 20,
-        "email": "Natalie.Amgad@gmail.com",
-        "phoneNumber": "01065321849",
-        "level": 1,
-        "registeredCourses": [1, 2, 3, 4, 5]
-      },
-      {
-        "_data_id": 6,
-        "nationalID": "30115891456987",
-        "name": "Seif Wael",
-        "age": 20,
-        "email": "Seif.wael@gmail.com",
-        "phoneNumber": "01115495583",
-        "level": 1,
-        "registeredCourses": [1, 2, 4, 5]
-      },
-      {
-        "_data_id": 7,
-        "nationalID": "301056848405321",
-        "name": "Omar Mohamed",
-        "age": 20,
-        "email": "omar.mohamed@gmail.com",
-        "phoneNumber": "01065484953",
-        "level": 1,
-        "registeredCourses": [1, 2, 3, 4, 5]
-      },
-      {
-        "_data_id": 8,
-        "nationalID": "301054946236548",
-        "name": "Yousef Adel",
-        "age": 20,
-        "email": "Yoused.adel@gmail.com",
-        "phoneNumber": "01554148795",
-        "level": 2,
-        "registeredCourses": [1, 3, 4, 5]
-      },
-      {
-        "_data_id": 9,
-        "nationalID": "30158684915487",
-        "name": "Mina Ashraf",
-        "age": 20,
-        "email": "Mina.Ashraf@gmail.com",
-        "phoneNumber": "01223548813",
-        "level": 2,
-        "registeredCourses": [1, 2, 3, 4, 5]
-      },
-      {
-        "_data_id": 10,
-        "nationalID": "30154884106597",
-        "name": "Ehab Essam",
-        "age": 20,
-        "email": "Ehab.Essam@gmail.com",
-        "phoneNumber": "01115489765",
-        "level": 2,
-        "registeredCourses": [1, 2, 3, 4]
-      },
-      {
-        "_data_id": 11,
-        "nationalID": "30107935351279",
-        "name": "Omar Fady",
-        "age": 20,
-        "email": "Omar.Fady@gmail.com",
-        "phoneNumber": "01063584975",
-        "level": 2,
-        "registeredCourses": [1, 4, 5]
-      },
-      {
-        "_data_id": 12,
-        "nationalID": "30106406320468",
-        "name": "Tarek Mahmoud",
-        "age": 20,
-        "email": "Tarek.Mahmoud@gmail.com",
-        "phoneNumber": "01115486584",
-        "level": 2,
-        "registeredCourses": [1, 2, 3, 5]
-      },
-      {
-        "_data_id": 13,
-        "nationalID": "30106040188200",
-        "name": "Hany Abdulaziz",
-        "age": 20,
-        "email": "Hany.Abdulaziz@gmail.com",
-        "phoneNumber": "01554629875",
-        "level": 3,
-        "registeredCourses": [3, 4, 5]
-      },
-      {
-        "_data_id": 14,
-        "nationalID": "30109172852011",
-        "name": "Mahmoud Sameh",
-        "age": 20,
-        "email": "Mahmoud.Sameh@gmail.com",
-        "phoneNumber": "01065384975",
-        "level": 3,
-        "registeredCourses": [2]
-      },
-      {
-        "_data_id": 15,
-        "nationalID": "30102290755583",
-        "name": "Gamal Shihab",
-        "age": 20,
-        "email": "Gamal.Shihab@gmail.com",
-        "phoneNumber": "01065947120",
-        "level": 3,
-        "registeredCourses": [2, 5]
-      },
-      {
-        "_data_id": 16,
-        "nationalID": "30100035637056",
-        "name": "Mahmoud Ibrahim",
-        "age": 20,
-        "email": "Mahmoud.Ibrahim@gmail.com",
-        "phoneNumber": "01110623948",
-        "level": 3,
-        "registeredCourses": [4, 5]
-      },
-      {
-        "_data_id": 17,
-        "nationalID": "30102975958153",
-        "name": "Abdullah Ahmed",
-        "age": 20,
-        "email": "Abdullah.Ahmed@gmail.com",
-        "phoneNumber": "01224756231",
-        "level": 3,
-        "registeredCourses": [3, 5]
-      },
-      {
-        "_data_id": 18,
-        "nationalID": "30101473961742",
-        "name": "Nour Kamel",
-        "age": 20,
-        "email": "Nour.Kamel@gmail.com",
-        "phoneNumber": "01065231048",
-        "level": 4,
-        "registeredCourses": [5]
-      },
-      {
-        "_data_id": 19,
-        "nationalID": "30104397677611",
-        "name": "Magdy Ahmed",
-        "age": 20,
-        "email": "Magdy.Ahmed@gmail.com",
-        "phoneNumber": "01005487953",
-        "level": 4,
-        "registeredCourses": [4]
-      },
-      {
-        "_data_id": 20,
-        "nationalID": "30105490771100",
-        "name": "Hany Ahmed",
-        "age": 20,
-        "email": "Hany.Ahmed@gmail.com",
-        "phoneNumber": "01005471213",
-        "level": 4,
-        "registeredCourses": [5]
-      }
-    ]
+  "courses": [
+    {
+      "id": 1,
+      "courseID": "CS50",
+      "name": "Introduction to Computer Science",
+      "professorID": 1,
+      "creditHours": 4
+    },
+    {
+      "id": 2,
+      "courseID": "PHYS101",
+      "name": "Physics 1",
+      "professorID": 2,
+      "creditHours": 4
+    },
+    {
+      "id": 3,
+      "courseID": "PSY200",
+      "name": "Humanities",
+      "professorID": 3,
+      "creditHours": 3
+    },
+    {
+      "id": 4,
+      "courseID": "ENG201",
+      "name": "English 2",
+      "professorID": 3,
+      "creditHours": 4
+    },
+    {
+      "id": 5,
+      "courseID": "ART305",
+      "name": "Creative Thinking",
+      "professorID": 4,
+      "creditHours": 2
+    }
+  ],
+  "professors": [
+    {
+      "id": 1,
+      "nationalID": 30110115458748,
+      "name": "Mohamed Hesham",
+      "age": 38,
+      "email": "mohamed.hesham@gmail.com",
+      "phoneNumber": "010234585877",
+      "faculty": "CS"
+    },
+    {
+      "id": 2,
+      "nationalID": 30110115482448,
+      "name": "Mahmoud Mounier",
+      "age": 44,
+      "email": "mahmoud.mounier@gmail.com",
+      "phoneNumber": "01144585877",
+      "faculty": "CS"
+    },
+    {
+      "id": 3,
+      "nationalID": 301101187652748,
+      "name": "Bassem Ahmed",
+      "age": 38,
+      "email": "bassem.ahmed@gmail.com",
+      "phoneNumber": "010247785877",
+      "faculty": "SC"
+    },
+    {
+      "id": 4,
+      "nationalID": 30110118796748,
+      "name": "Mohamed Hesham",
+      "age": 81,
+      "email": "mohamed.hesham2@gmail.com",
+      "phoneNumber": "017234585877",
+      "faculty": "CS"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "nationalID": "30106870105476",
+      "name": "Ali Rafeeq",
+      "age": 20,
+      "email": "ali.rafeeq@gmail.com",
+      "phoneNumber": "01554648295",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "nationalID": "30105110102168",
+      "name": "Ahmed Tarek",
+      "age": 20,
+      "email": "Ahmed.tarek@gmail.com",
+      "phoneNumber": "01065494523",
+      "level": 1,
+      "registeredCourses": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "nationalID": "301078440124597",
+      "name": "Abdulaziz Wael",
+      "age": 20,
+      "email": "Abdulaziz.farahat@gmail.com",
+      "phoneNumber": "01112334578",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 4,
+      "nationalID": "30105684912305",
+      "name": "Kevin Sheriff",
+      "age": 20,
+      "email": "Kevin.Sheriff@gmail.com",
+      "phoneNumber": "01226778953",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "nationalID": "3010566589472",
+      "name": "Natalie Amgad",
+      "age": 20,
+      "email": "Natalie.Amgad@gmail.com",
+      "phoneNumber": "01065321849",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "nationalID": "30115891456987",
+      "name": "Seif Wael",
+      "age": 20,
+      "email": "Seif.wael@gmail.com",
+      "phoneNumber": "01115495583",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "nationalID": "301056848405321",
+      "name": "Omar Mohamed",
+      "age": 20,
+      "email": "omar.mohamed@gmail.com",
+      "phoneNumber": "01065484953",
+      "level": 1,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 8,
+      "nationalID": "301054946236548",
+      "name": "Yousef Adel",
+      "age": 20,
+      "email": "Yoused.adel@gmail.com",
+      "phoneNumber": "01554148795",
+      "level": 2,
+      "registeredCourses": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 9,
+      "nationalID": "30158684915487",
+      "name": "Mina Ashraf",
+      "age": 20,
+      "email": "Mina.Ashraf@gmail.com",
+      "phoneNumber": "01223548813",
+      "level": 2,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 10,
+      "nationalID": "30154884106597",
+      "name": "Ehab Essam",
+      "age": 20,
+      "email": "Ehab.Essam@gmail.com",
+      "phoneNumber": "01115489765",
+      "level": 2,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 11,
+      "nationalID": "30107935351279",
+      "name": "Omar Fady",
+      "age": 20,
+      "email": "Omar.Fady@gmail.com",
+      "phoneNumber": "01063584975",
+      "level": 2,
+      "registeredCourses": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 12,
+      "nationalID": "30106406320468",
+      "name": "Tarek Mahmoud",
+      "age": 20,
+      "email": "Tarek.Mahmoud@gmail.com",
+      "phoneNumber": "01115486584",
+      "level": 2,
+      "registeredCourses": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "id": 13,
+      "nationalID": "30106040188200",
+      "name": "Hany Abdulaziz",
+      "age": 20,
+      "email": "Hany.Abdulaziz@gmail.com",
+      "phoneNumber": "01554629875",
+      "level": 3,
+      "registeredCourses": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 14,
+      "nationalID": "30109172852011",
+      "name": "Mahmoud Sameh",
+      "age": 20,
+      "email": "Mahmoud.Sameh@gmail.com",
+      "phoneNumber": "01065384975",
+      "level": 3,
+      "registeredCourses": [
+        2
+      ]
+    },
+    {
+      "id": 15,
+      "nationalID": "30102290755583",
+      "name": "Gamal Shihab",
+      "age": 20,
+      "email": "Gamal.Shihab@gmail.com",
+      "phoneNumber": "01065947120",
+      "level": 3,
+      "registeredCourses": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": 16,
+      "nationalID": "30100035637056",
+      "name": "Mahmoud Ibrahim",
+      "age": 20,
+      "email": "Mahmoud.Ibrahim@gmail.com",
+      "phoneNumber": "01110623948",
+      "level": 3,
+      "registeredCourses": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": 17,
+      "nationalID": "30102975958153",
+      "name": "Abdullah Ahmed",
+      "age": 20,
+      "email": "Abdullah.Ahmed@gmail.com",
+      "phoneNumber": "01224756231",
+      "level": 3,
+      "registeredCourses": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": 18,
+      "nationalID": "30101473961742",
+      "name": "Nour Kamel",
+      "age": 20,
+      "email": "Nour.Kamel@gmail.com",
+      "phoneNumber": "01065231048",
+      "level": 4,
+      "registeredCourses": [
+        5
+      ]
+    },
+    {
+      "id": 19,
+      "nationalID": "30104397677611",
+      "name": "Magdy Ahmed",
+      "age": 20,
+      "email": "Magdy.Ahmed@gmail.com",
+      "phoneNumber": "01005487953",
+      "level": 4,
+      "registeredCourses": [
+        4
+      ]
+    },
+    {
+      "id": 20,
+      "nationalID": "30105490771100",
+      "name": "Hany Ahmed",
+      "age": 20,
+      "email": "Hany.Ahmed@gmail.com",
+      "phoneNumber": "01005471213",
+      "level": 4,
+      "registeredCourses": [
+        5
+      ]
+    }
+  ]
 }
