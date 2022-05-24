@@ -1,0 +1,78 @@
+{
+    "courses": [
+        {
+            "_data_id": 1,
+            "id": "CS50",
+            "name": "Introduction to Computer Science",
+            "professor": 1,
+            "creditHours": 4
+        },
+        {
+            "_data_id": 2,
+            "id": "PHYS101",
+            "name": "Physics 1",
+            "professor": 2,
+            "creditHours": 4
+        },
+        {
+            "_data_id": 3,
+            "id": "PSY200",
+            "name": "Humanities",
+            "professor": 3,
+            "creditHours": 3
+        },
+        {
+            "_data_id": 4,
+            "id": "ENG201",
+            "name": "English 2",
+            "professor": 3,
+            "creditHours": 4
+        },
+        {
+            "_data_id": 5,
+            "id": "ART305",
+            "name": "Creative Thinking",
+            "professor": 4,
+            "creditHours": 2
+        }
+    ],
+    "professors": [
+        {
+            "_data_id": 1,
+            "nationalID": 30110115458748,
+            "name": "Mohamed Hesham",
+            "age": 38,
+            "email": "mohamed.hesham@gmail.com",
+            "phoneNumber": "010234585877",
+            "faculty": "CS"
+        },
+        {
+            "_data_id": 2,
+            "nationalID": 30110115482448,
+            "name": "Mahmoud Mounier",
+            "age": 44,
+            "email": "mahmoud.mounier@gmail.com",
+            "phoneNumber": "01144585877",
+            "faculty": "CS"
+        },
+        {
+            "_data_id": 3,
+            "nationalID": 301101187652748,
+            "name": "Bassem Ahmed",
+            "age": 38,
+            "email": "bassem.ahmed@gmail.com",
+            "phoneNumber": "010247785877",
+            "faculty": "SC"
+        },
+        {
+            "_data_id": 4,
+            "nationalID": 30110118796748,
+            "name": "Mohamed Hesham",
+            "age": 81,
+            "email": "mohamed.hesham2@gmail.com",
+            "phoneNumber": "017234585877",
+            "faculty": "CS"
+        }
+    ],
+    "students": []
+}
