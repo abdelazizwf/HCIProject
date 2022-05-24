@@ -2,16 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
-import { PendingApprovalsComponent } from './components/pending-approvals/pending-approvals.component';
-
+import { ProfessorCardComponent } from './components/professor-card/professor-card.component';
+import { ProfessorApprovalsComponent } from './components/professor-approvals/professor-approvals.component';
 
 @NgModule({
-  declarations: [
-    PendingApprovalsComponent
-  ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+    declarations: [ProfessorCardComponent, ProfessorApprovalsComponent],
+    imports: [CommonModule, AdminRoutingModule],
 })
-export class AdminModule { }
+export class AdminModule {}

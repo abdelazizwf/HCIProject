@@ -26,7 +26,17 @@ export class ProfessorService {
         return this.http.get<Professor>(url);
     }
 
-    public addProfessor(prof: Professor): Observable<Professor> {
+    addProfessor(prof: Professor): Observable<Professor> {
         return this.http.post<Professor>(this.apiUrl, prof, httpOptions);
+    }
+
+    updateProfessor(prof: Professor): Observable<Professor> {
+        const url: string = `${this.apiUrl}/${prof.id}`;
+        return this.http.put<Professor>(url, prof, httpOptions);
+    }
+
+    deleteProfessor(prof: Professor): Observable<Professor> {
+        const url: string = `${this.apiUrl}/${prof.id}`;
+        return this.http.delete<Professor>(url);
     }
 }

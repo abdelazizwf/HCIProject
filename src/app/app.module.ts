@@ -10,6 +10,7 @@ import { StudentRegisterComponent } from './components/student-register/student-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FacultyRegisterComponent } from './components/faculty-register/faculty-register.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
     declarations: [

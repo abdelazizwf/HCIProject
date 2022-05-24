@@ -44,7 +44,7 @@
       "age": 38,
       "email": "mohamed.hesham@gmail.com",
       "phoneNumber": "010234585877",
-      "approved": true,
+      "approved": false,
       "faculty": "CS"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Mahmoud Mounier",
       "age": 44,
       "email": "mahmoud.mounier@gmail.com",
-      "approved": true,
+      "approved": false,
       "phoneNumber": "01144585877",
       "faculty": "CS"
     },
@@ -63,7 +63,7 @@
       "name": "Bassem Ahmed",
       "age": 38,
       "email": "bassem.ahmed@gmail.com",
-      "approved": true,
+      "approved": false,
       "phoneNumber": "010247785877",
       "faculty": "SC"
     },
@@ -76,16 +76,6 @@
       "approved": false,
       "phoneNumber": "017234585877",
       "faculty": "CS"
-    },
-    {
-      "nationalID": "01096228869999",
-      "name": "Abdelaziz Farahat",
-      "age": 85,
-      "email": "abdelaziz.w.f@gmail.com",
-      "faculty": "FCIS",
-      "phoneNumber": "01096228869",
-      "approved": false,
-      "id": 5
     }
   ],
   "students": [

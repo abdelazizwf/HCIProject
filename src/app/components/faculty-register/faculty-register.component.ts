@@ -6,7 +6,7 @@ import { ProfessorService } from '../../services/professor.service';
 @Component({
     selector: 'app-faculty-register',
     templateUrl: './faculty-register.component.html',
-    styleUrls: ['./faculty-register.component.css'],
+    styleUrls: [],
 })
 export class FacultyRegisterComponent implements OnInit {
     facultyRegisterForm!: FormGroup;

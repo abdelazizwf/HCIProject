@@ -6,7 +6,7 @@ import { StudentService } from '../../services/student.service';
 @Component({
     selector: 'app-student-register',
     templateUrl: './student-register.component.html',
-    styleUrls: ['./student-register.component.css'],
+    styleUrls: [],
 })
 export class StudentRegisterComponent implements OnInit {
     studentRegisterForm!: FormGroup;

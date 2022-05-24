@@ -12,6 +12,11 @@ const routes: Routes = [
         path: 'facultyRegister',
         component: FacultyRegisterComponent,
     },
+    {
+        path: 'admin',
+        loadChildren: () =>
+            import('./admin/admin.module').then((m) => m.AdminModule),
+    },
 ];
 
 @NgModule({
