@@ -30,15 +30,65 @@
                 Please provide a valid email.
             </small>
         </div>
-        <div class="form-group form-check">
+        <div class="form-group">
+            <label for="nationalID">nationalID</label>
             <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
+                type="nationalID"
+                class="form-control"
+                id="nationalID"
+                formControlName="nationalID"
             />
-            <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
+            <small
+                class="text-danger"
+                *ngIf="nationalID && nationalID.invalid && nationalID.touched"
             >
+                Please provide a valid nationalID.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="age">age</label>
+            <input
+                type="age"
+                class="form-control"
+                id="age"
+                formControlName="age"
+            />
+            <small
+                class="text-danger"
+                *ngIf="age && age.invalid && age.touched"
+            >
+                Please provide a valid age.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">phoneNumber</label>
+            <input
+                type="phoneNumber"
+                class="form-control"
+                id="phoneNumber"
+                formControlName="phoneNumber"
+            />
+            <small
+                class="text-danger"
+                *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"
+            >
+                Please provide a valid phoneNumber.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="level">level</label>
+            <input
+                type="level"
+                class="form-control"
+                id="level"
+                formControlName="level"
+            />
+            <small
+                class="text-danger"
+                *ngIf="level && level.invalid && level.touched"
+            >
+                Please provide a valid level.
+            </small>
         </div>
         <button
             type="submit"
