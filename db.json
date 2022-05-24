@@ -44,6 +44,7 @@
       "age": 38,
       "email": "mohamed.hesham@gmail.com",
       "phoneNumber": "010234585877",
+      "approved": true,
       "faculty": "CS"
     },
     {
@@ -52,6 +53,7 @@
       "name": "Mahmoud Mounier",
       "age": 44,
       "email": "mahmoud.mounier@gmail.com",
+      "approved": true,
       "phoneNumber": "01144585877",
       "faculty": "CS"
     },
@@ -61,6 +63,7 @@
       "name": "Bassem Ahmed",
       "age": 38,
       "email": "bassem.ahmed@gmail.com",
+      "approved": true,
       "phoneNumber": "010247785877",
       "faculty": "SC"
     },
@@ -70,8 +73,19 @@
       "name": "Mohamed Hesham",
       "age": 81,
       "email": "mohamed.hesham2@gmail.com",
+      "approved": false,
       "phoneNumber": "017234585877",
       "faculty": "CS"
+    },
+    {
+      "nationalID": "01096228869999",
+      "name": "Abdelaziz Farahat",
+      "age": 85,
+      "email": "abdelaziz.w.f@gmail.com",
+      "faculty": "FCIS",
+      "phoneNumber": "01096228869",
+      "approved": false,
+      "id": 5
     }
   ],
   "students": [
@@ -82,6 +96,7 @@
       "age": 20,
       "email": "ali.rafeeq@gmail.com",
       "phoneNumber": "01554648295",
+      "approved": true,
       "level": 1,
       "registeredCourses": [
         1,
@@ -98,6 +113,7 @@
       "age": 20,
       "email": "Ahmed.tarek@gmail.com",
       "phoneNumber": "01065494523",
+      "approved": true,
       "level": 1,
       "registeredCourses": [
         2,
@@ -113,6 +129,7 @@
       "age": 20,
       "email": "Abdulaziz.farahat@gmail.com",
       "phoneNumber": "01112334578",
+      "approved": true,
       "level": 1,
       "registeredCourses": [
         1,
@@ -129,6 +146,7 @@
       "age": 20,
       "email": "Kevin.Sheriff@gmail.com",
       "phoneNumber": "01226778953",
+      "approved": false,
       "level": 1,
       "registeredCourses": [
         1,
@@ -144,6 +162,7 @@
       "age": 20,
       "email": "Natalie.Amgad@gmail.com",
       "phoneNumber": "01065321849",
+      "approved": true,
       "level": 1,
       "registeredCourses": [
         1,
@@ -160,6 +179,7 @@
       "age": 20,
       "email": "Seif.wael@gmail.com",
       "phoneNumber": "01115495583",
+      "approved": false,
       "level": 1,
       "registeredCourses": [
         1,
@@ -175,6 +195,7 @@
       "age": 20,
       "email": "omar.mohamed@gmail.com",
       "phoneNumber": "01065484953",
+      "approved": false,
       "level": 1,
       "registeredCourses": [
         1,
@@ -191,6 +212,7 @@
       "age": 20,
       "email": "Yoused.adel@gmail.com",
       "phoneNumber": "01554148795",
+      "approved": true,
       "level": 2,
       "registeredCourses": [
         1,
@@ -206,6 +228,7 @@
       "age": 20,
       "email": "Mina.Ashraf@gmail.com",
       "phoneNumber": "01223548813",
+      "approved": true,
       "level": 2,
       "registeredCourses": [
         1,
@@ -222,6 +245,7 @@
       "age": 20,
       "email": "Ehab.Essam@gmail.com",
       "phoneNumber": "01115489765",
+      "approved": true,
       "level": 2,
       "registeredCourses": [
         1,
@@ -237,6 +261,7 @@
       "age": 20,
       "email": "Omar.Fady@gmail.com",
       "phoneNumber": "01063584975",
+      "approved": false,
       "level": 2,
       "registeredCourses": [
         1,
@@ -251,6 +276,7 @@
       "age": 20,
       "email": "Tarek.Mahmoud@gmail.com",
       "phoneNumber": "01115486584",
+      "approved": true,
       "level": 2,
       "registeredCourses": [
         1,
@@ -266,6 +292,7 @@
       "age": 20,
       "email": "Hany.Abdulaziz@gmail.com",
       "phoneNumber": "01554629875",
+      "approved": true,
       "level": 3,
       "registeredCourses": [
         3,
@@ -280,6 +307,7 @@
       "age": 20,
       "email": "Mahmoud.Sameh@gmail.com",
       "phoneNumber": "01065384975",
+      "approved": false,
       "level": 3,
       "registeredCourses": [
         2
@@ -292,6 +320,7 @@
       "age": 20,
       "email": "Gamal.Shihab@gmail.com",
       "phoneNumber": "01065947120",
+      "approved": false,
       "level": 3,
       "registeredCourses": [
         2,
@@ -305,6 +334,7 @@
       "age": 20,
       "email": "Mahmoud.Ibrahim@gmail.com",
       "phoneNumber": "01110623948",
+      "approved": false,
       "level": 3,
       "registeredCourses": [
         4,
@@ -318,6 +348,7 @@
       "age": 20,
       "email": "Abdullah.Ahmed@gmail.com",
       "phoneNumber": "01224756231",
+      "approved": true,
       "level": 3,
       "registeredCourses": [
         3,
@@ -331,6 +362,7 @@
       "age": 20,
       "email": "Nour.Kamel@gmail.com",
       "phoneNumber": "01065231048",
+      "approved": true,
       "level": 4,
       "registeredCourses": [
         5
@@ -343,6 +375,7 @@
       "age": 20,
       "email": "Magdy.Ahmed@gmail.com",
       "phoneNumber": "01005487953",
+      "approved": false,
       "level": 4,
       "registeredCourses": [
         4
@@ -355,10 +388,21 @@
       "age": 20,
       "email": "Hany.Ahmed@gmail.com",
       "phoneNumber": "01005471213",
+      "approved": true,
       "level": 4,
       "registeredCourses": [
         5
       ]
+    },
+    {
+      "nationalID": "12345678912345",
+      "name": "Zoom One Two",
+      "age": 21,
+      "email": "abdelaziz20191703020@cis.asu.edu.eg",
+      "level": 3,
+      "phoneNumber": "01012345678",
+      "approved": false,
+      "id": 21
     }
   ]
 }

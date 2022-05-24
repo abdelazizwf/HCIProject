@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Student } from 'src/app/types/Student';
+import { StudentService } from '../../services/student.service';
 
 @Component({
     selector: 'app-student-register',
@@ -8,9 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class StudentRegisterComponent implements OnInit {
     studentRegisterForm!: FormGroup;
-    levels: number[] = [1, 2, 3, 4];
 
-    constructor(private formBuilder: FormBuilder) {}
+    constructor(
+        private formBuilder: FormBuilder,
+        private studentService: StudentService
+    ) {}
 
     ngOnInit(): void {
         this.studentRegisterForm = this.formBuilder.group({
@@ -81,9 +85,43 @@ export class StudentRegisterComponent implements OnInit {
         return this.studentRegisterForm.get('level');
     }
 
-    changeLevel(e: any) {
-        this.level?.setValue(e.target.value, {
-            onlySelf: true,
+    onSubmit(): void {
+        if (this.studentRegisterForm.valid) {
+            const student: Student = this.mapFormToStudent();
+            this.studentService.addStudent(student).subscribe();
+            alert(
+                'Your information have been submitted and are pending approval!'
+            );
+            this.refreshFields();
+        } else {
+            this.validateFields();
+        }
+    }
+
+    validateFields(): void {
+        Object.keys(this.studentRegisterForm.controls).forEach((field) => {
+            const control = this.studentRegisterForm.get(field);
+            control?.markAsTouched({ onlySelf: true });
+        });
+    }
+
+    mapFormToStudent(): Student {
+        let prof: Student = {
+            nationalID: this.nationalID?.value,
+            name: this.name?.value,
+            age: this.age?.value,
+            email: this.email?.value,
+            level: this.level?.value,
+            phoneNumber: this.phoneNumber?.value,
+            approved: false,
+        };
+        return prof;
+    }
+
+    refreshFields(): void {
+        Object.keys(this.studentRegisterForm.controls).forEach((field) => {
+            const control = this.studentRegisterForm.get(field);
+            control?.reset('');
         });
     }
 }

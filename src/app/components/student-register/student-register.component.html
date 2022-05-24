@@ -82,6 +82,7 @@
             type="submit"
             class="btn btn-primary"
             [disabled]="!studentRegisterForm.valid"
+            (click)="onSubmit()"
         >
             Submit
         </button>
