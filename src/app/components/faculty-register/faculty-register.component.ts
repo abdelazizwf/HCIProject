@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'app-student-register',
-    templateUrl: './student-register.component.html',
-    styleUrls: ['./student-register.component.css'],
+    selector: 'app-faculty-register',
+    templateUrl: './faculty-register.component.html',
+    styleUrls: ['./faculty-register.component.css'],
 })
-export class StudentRegisterComponent implements OnInit {
+export class FacultyRegisterComponent implements OnInit {
     studentRegisterForm!: FormGroup;
 
     constructor(private formBuilder: FormBuilder) {}
@@ -18,7 +18,7 @@ export class StudentRegisterComponent implements OnInit {
             nationalID:['', [Validators.required, Validators.pattern("^[0-9]*$")]],
             age:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(2)]],
             phoneNumber:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(11)]],
-            level:['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(1)]],
+            faculty:['', [Validators.required]],
         });
     }
 
@@ -42,8 +42,8 @@ export class StudentRegisterComponent implements OnInit {
         return this.studentRegisterForm.get('phoneNumber');
     }
     
-    get level() {
-        return this.studentRegisterForm.get('level');
+    get faculty() {
+        return this.studentRegisterForm.get('faculty');
     }
 
 }

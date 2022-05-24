@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { StudentRegisterComponent } from './components/student-register/student-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FacultyRegisterComponent } from './components/faculty-register/faculty-register.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         HeaderComponent,
         FooterComponent,
         StudentRegisterComponent,
+        FacultyRegisterComponent,
     ],
     imports: [
         BrowserModule,

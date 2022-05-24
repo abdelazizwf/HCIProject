@@ -76,18 +76,18 @@
             </small>
         </div>
         <div class="form-group">
-            <label for="level">level</label>
+            <label for="faculty">faculty</label>
             <input
-                type="level"
+                type="faculty"
                 class="form-control"
-                id="level"
-                formControlName="level"
+                id="faculty"
+                formControlName="faculty"
             />
             <small
                 class="text-danger"
-                *ngIf="level && level.invalid && level.touched"
+                *ngIf="faculty && faculty.invalid && faculty.touched"
             >
-                Please provide a valid level.
+                Please enter a faculty.
             </small>
         </div>
         <button
