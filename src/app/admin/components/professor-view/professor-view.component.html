@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="bg-warning w-100 my-3">
+        <h5 class="p-3">Pending Approval: {{ unapprovedProfs.length }}</h5>
+    </div>
+    <div class="container my-3">
+        <div class="row row-cols-3">
+            <app-professor-card
+                *ngFor="let p of unapprovedProfs"
+                [prof]="p"
+                class="col my-2"
+                (onApproveProf)="approveProf(p)"
+                (onDeleteProf)="deleteProf(p)"
+                [showApprove]="true"
+            ></app-professor-card>
+        </div>
+    </div>
+    <div class="bg-info w-100 my-3">
+        <h5 class="p-3">Approved: {{ approvedProfs.length }}</h5>
+    </div>
+    <div class="container my-3">
+        <div class="row row-cols-3">
+            <app-professor-card
+                *ngFor="let p of approvedProfs"
+                [prof]="p"
+                class="col my-2"
+                (onDeleteProf)="deleteProf(p)"
+                [showApprove]="false"
+            ></app-professor-card>
+        </div>
+    </div>
+</div>

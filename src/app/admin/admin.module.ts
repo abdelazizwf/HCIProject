@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { ProfessorCardComponent } from './components/professor-card/professor-card.component';
-import { ProfessorApprovalsComponent } from './components/professor-approvals/professor-approvals.component';
+import { ProfessorViewComponent } from './components/professor-view/professor-view.component';
 
 @NgModule({
-    declarations: [ProfessorCardComponent, ProfessorApprovalsComponent],
+    declarations: [ProfessorCardComponent, ProfessorViewComponent],
     imports: [CommonModule, AdminRoutingModule],
 })
 export class AdminModule {}
