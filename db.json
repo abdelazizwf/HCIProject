@@ -74,5 +74,86 @@
             "faculty": "CS"
         }
     ],
-    "students": []
+    "students": [
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 3, 4, 5]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[2, 3, 4, 5]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 3, 4, 5]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 3, 4]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 3, 4, 5]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 4, 5]
+      },
+      {
+        "level": 1,
+        "registeredCourses"?: Course[1, 2, 3, 4, 5]
+      },
+      {
+        "level": 2,
+        "registeredCourses"?: Course[1, 3, 4, 5]
+      },
+      {
+        "level": 2,
+        "registeredCourses"?: Course[1, 2, 3, 4, 5]
+      },
+      {
+        "level": 2,
+        "registeredCourses"?: Course[1, 2, 3, 4]
+      },
+      {
+        "level": 2,
+        "registeredCourses"?: Course[1, 4, 5]
+      },
+      {
+        "level": 2,
+        "registeredCourses"?: Course[1, 2, 3, 5]
+      },
+      {
+        "level": 3,
+        "registeredCourses"?: Course[3, 4, 5]
+      },
+      {
+        "level": 3,
+        "registeredCourses"?: Course[2]
+      },
+      {
+        "level": 3,
+        "registeredCourses"?: Course[2, 5]
+      },
+      {
+        "level": 3,
+        "registeredCourses"?: Course[4, 5]
+      },
+      {
+        "level": 3,
+        "registeredCourses"?: Course[3, 5]
+      },
+      {
+        "level": 4,
+        "registeredCourses"?: Course[5]
+      },
+      {
+        "level": 4,
+        "registeredCourses"?: Course[4]
+      },
+      {
+        "level": 4,
+        "registeredCourses"?: Course[5]
+      }
+    ]
 }
