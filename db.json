@@ -451,65 +451,65 @@
       "id": 1,
       "title": "Lecture 1",
       "description": "Lecture 1 PDF",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 1
     },
     {
       "id": 2,
       "title": "Video 1",
       "description": "Lecture 1 Recording",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 1
     },
     {
       "id": 3,
       "title": "DS Assignment 2",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 2
     },
     {
       "id": 4,
       "title": "General Exercises",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 1
     },
     {
       "id": 5,
       "title": "Lecture 4",
       "description": "Lecture 4 explaining priority queues (heaps) and how and when to use them",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 2
     },
     {
       "id": 6,
       "title": "Office Hours Schedule",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 3
     },
     {
       "id": 7,
       "title": "Lecture 6 Video",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 4
     },
     {
       "id": 8,
       "title": "Team Distribution Sheet",
       "description": "Kindly find your assigned team and project idea to start working",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 5
     },
     {
       "id": 9,
       "title": "Lecture 9",
       "description": "Lecture 9 PDF",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 1
     },
     {
       "id": 10,
       "title": "Practical Exam Schedule",
-      "link": "youtube.com",
+      "link": "https://www.youtube.com",
       "courseID": 1
     }
   ]

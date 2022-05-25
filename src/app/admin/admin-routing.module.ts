@@ -6,6 +6,7 @@ import { FacultyRegisterComponent } from '../components/faculty-register/faculty
 import { StudentRegisterComponent } from '../components/student-register/student-register.component';
 import { CourseViewComponent } from './components/course-view/course-view.component';
 import { CourseFormComponent } from '../components/course-form/course-form.component';
+import { MaterialViewComponent } from './components/material-view/material-view.component';
 
 const routes: Routes = [
     {
@@ -35,6 +36,10 @@ const routes: Routes = [
     {
         path: 'courseUpdate/:id',
         component: CourseFormComponent,
+    },
+    {
+        path: 'materials',
+        component: MaterialViewComponent,
     },
 ];
 

@@ -37,7 +37,7 @@ export class CourseFormComponent implements OnInit {
 
         this.courseForm = this.formBuilder.group({
             name: ['', [Validators.required, Validators.maxLength(128)]],
-            courseID: ['', [Validators.required, Validators.maxLength(6)]],
+            courseID: ['', [Validators.required, Validators.maxLength(8)]],
             description: ['', [Validators.maxLength(521)]],
             image: [''],
             professor: [0, [Validators.required, Validators.min(1)]],

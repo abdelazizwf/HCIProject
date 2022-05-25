@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        {{ course.courseID }}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>{{ material.title }}</strong>
+        </li>
+        <li class="list-group-item text-muted" *ngIf="material.description">
+            {{ material.description }}
+        </li>
+        <a class="list-group-item" [href]="material.link">Link</a>
+    </ul>
+</div>
