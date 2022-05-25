@@ -21,6 +21,11 @@ export class CourseService {
         return this.http.get<Course[]>(this.apiUrl);
     }
 
+    getCourseByID(id: number): Observable<Course> {
+        const url: string = `${this.apiUrl}/${id}`;
+        return this.http.get<Course>(url);
+    }
+
     addCourse(course: Course): Observable<Course> {
         return this.http.post<Course>(this.apiUrl, course, httpOptions);
     }
@@ -28,5 +33,10 @@ export class CourseService {
     deleteCourse(course: Course): Observable<Course> {
         const url: string = `${this.apiUrl}/${course.id}`;
         return this.http.delete<Course>(url);
+    }
+
+    updateCourse(course: Course): Observable<Course> {
+        const url: string = `${this.apiUrl}/${course.id}`;
+        return this.http.put<Course>(url, course, httpOptions);
     }
 }

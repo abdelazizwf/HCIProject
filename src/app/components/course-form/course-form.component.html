@@ -1,0 +1,119 @@
+<div class="container my-3" style="max-width: 600px">
+    <div class="spinner-border text-dark" role="status" *ngIf="!loaded">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <form [formGroup]="courseForm" novalidate *ngIf="loaded">
+        <div class="form-group">
+            <label for="name">Course Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                formControlName="name"
+            />
+            <small class="text-danger" *ngIf="name?.invalid && name?.touched">
+                Please Provide a Valid Course Name.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="courseID">Course ID</label>
+            <input
+                type="text"
+                class="form-control"
+                id="courseID"
+                formControlName="courseID"
+            />
+            <small
+                class="text-danger"
+                *ngIf="courseID?.invalid && courseID?.touched"
+            >
+                Please Provide a Valid Course ID.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+                class="form-control"
+                id="description"
+                formControlName="description"
+                rows="4"
+            >
+            </textarea>
+            <small
+                class="text-danger"
+                *ngIf="description?.invalid && description?.touched"
+            >
+                Please Provide a Valid Description.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input
+                type="text"
+                class="form-control"
+                id="image"
+                formControlName="image"
+            />
+            <small class="text-danger" *ngIf="image?.invalid && image?.touched">
+                Please Provide a Valid Image Link.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="professor">Professor</label>
+            <select
+                class="form-control"
+                id="professor"
+                formControlNAme="professor"
+                (change)="changeProf($event)"
+            >
+                <option value="0">Choose Professor</option>
+                <option *ngFor="let p of profs" [value]="p.id">
+                    {{ p.name }} [{{ p.email }}]
+                </option>
+            </select>
+            <small
+                class="text-danger"
+                *ngIf="professor?.invalid && professor?.touched"
+            >
+                Please Choose a Professor.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="creditHours">Credit Hours</label>
+            <input
+                type="number"
+                class="form-control"
+                id="creditHours"
+                formControlName="creditHours"
+            />
+            <small
+                class="text-danger"
+                *ngIf="creditHours?.invalid && creditHours?.touched"
+            >
+                Please Enter the number of Credit Hours.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="prerequisites">Prerequisites</label>
+            <select
+                multiple
+                class="form-control"
+                id="prerequisites"
+                formControlName="prerequisites"
+            >
+                <option *ngFor="let c of courses" [value]="c.id">
+                    {{ c.courseID }}
+                </option>
+            </select>
+            <small
+                class="text-danger"
+                *ngIf="prerequisites?.invalid && prerequisites?.touched"
+            >
+                Please Choose Valid Prerequisites.
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+            {{ btnText }}
+        </button>
+    </form>
+</div>

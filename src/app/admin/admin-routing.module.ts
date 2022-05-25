@@ -5,6 +5,7 @@ import { StudentViewComponent } from './components/student-view/student-view.com
 import { FacultyRegisterComponent } from '../components/faculty-register/faculty-register.component';
 import { StudentRegisterComponent } from '../components/student-register/student-register.component';
 import { CourseViewComponent } from './components/course-view/course-view.component';
+import { CourseFormComponent } from '../components/course-form/course-form.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'courses',
         component: CourseViewComponent,
+    },
+    {
+        path: 'addCourse',
+        component: CourseFormComponent,
     },
 ];
 

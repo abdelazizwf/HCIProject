@@ -41,6 +41,19 @@
       ],
       "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
       "description": "Excepteur proident velit id nulla et sit exercitation officia est sint voluptate adipisicing irure sunt. Do duis culpa do ut do. Aliqua officia veniam irure adipisicing pariatur veniam in. Tempor fugiat qui elit eiusmod dolore anim. Anim ullamco veniam do dolor ad dolore ut amet magna quis sit exercitation culpa."
+    },
+    {
+      "courseID": "ART203",
+      "name": "Creative Thinking",
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+      "description": "Not now!!",
+      "professorID": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "creditHours": 2,
+      "id": 5
     }
   ],
   "professors": [

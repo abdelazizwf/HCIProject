@@ -1,7 +1,5 @@
-import { Professor } from './Professor';
-
 export interface Course {
-    id: number;
+    id?: number;
     courseID: string;
     name: string;
     description: string;
