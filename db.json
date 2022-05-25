@@ -58,14 +58,14 @@
       "faculty": "CS"
     },
     {
-      "id": 2,
       "nationalID": 30110115482448,
       "name": "Mahmoud Mounier",
-      "age": 44,
+      "age": 45,
       "email": "mahmoud.mounier@gmail.com",
-      "approved": true,
+      "faculty": "CS",
       "phoneNumber": "01144585877",
-      "faculty": "CS"
+      "approved": true,
+      "id": 2
     },
     {
       "id": 3,
@@ -78,14 +78,24 @@
       "faculty": "SC"
     },
     {
-      "id": 4,
       "nationalID": 30110118796748,
       "name": "Mohamed Hesham",
       "age": 81,
-      "email": "mohamed.hesham2@gmail.com",
+      "email": "mohamed.hesham44@gmail.com",
+      "faculty": "CS",
+      "phoneNumber": "01723458587",
       "approved": true,
-      "phoneNumber": "017234585877",
-      "faculty": "CS"
+      "id": 4
+    },
+    {
+      "nationalID": "01045678912345",
+      "name": "Abdelaziz Farahat",
+      "age": 85,
+      "email": "abdelaziz.w.f@gmail.com",
+      "faculty": "FCIS",
+      "phoneNumber": "01045678912",
+      "approved": true,
+      "id": 5
     }
   ],
   "students": [

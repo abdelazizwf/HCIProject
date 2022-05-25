@@ -1,15 +1,27 @@
-<div class="card" style="width: 18rem">
+<div class="card">
     <div class="card-body">
         <h5 class="card-title">{{ prof.name }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ prof.email }}</h6>
-        <h6 class="card-subtitle mb-2 text-muted">{{ prof.phoneNumber }}</h6>
-        <h6 class="card-subtitle mb-2 text-muted">{{ prof.faculty }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <i class="fas fa-envelope"></i> {{ prof.email }}
+        </h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <i class="fas fa-phone"></i> {{ prof.phoneNumber }}
+        </h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <i class="fas fa-university"></i> {{ prof.faculty }}
+        </h6>
         <a (click)="onDelete()" class="card-link btn btn-danger">Delete</a>
         <a
             (click)="onApprove()"
             class="card-link btn btn-success"
             *ngIf="showApprove"
             >Approve</a
+        >
+        <a
+            [routerLink]="['../', 'facultyUpdate', prof.id]"
+            class="card-link btn btn-primary"
+            *ngIf="!showApprove"
+            >Update</a
         >
     </div>
 </div>

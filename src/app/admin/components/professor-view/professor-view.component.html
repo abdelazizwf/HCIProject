@@ -1,6 +1,8 @@
 <div class="container">
     <div class="bg-warning w-100 my-3">
-        <h5 class="p-3">Pending Approval: {{ unapprovedProfs.length }}</h5>
+        <h5 class="p-3">
+            Pending Approval: {{ unapprovedProfs?.length || 0 }}
+        </h5>
     </div>
     <div class="container my-3">
         <div class="row row-cols-3">
@@ -15,7 +17,7 @@
         </div>
     </div>
     <div class="bg-info w-100 my-3">
-        <h5 class="p-3">Approved: {{ approvedProfs.length }}</h5>
+        <h5 class="p-3">Approved: {{ approvedProfs?.length || 0 }}</h5>
     </div>
     <div class="container my-3">
         <div class="row row-cols-3">

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Professor } from '../../types/Professor';
 import { ProfessorService } from '../../services/professor.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-faculty-register',
@@ -9,11 +10,17 @@ import { ProfessorService } from '../../services/professor.service';
     styleUrls: [],
 })
 export class FacultyRegisterComponent implements OnInit {
+    id: number = 0;
     facultyRegisterForm!: FormGroup;
+    btnText: string = 'Register';
+    prof?: Professor;
+    loaded: boolean = false;
 
     constructor(
         private formBuilder: FormBuilder,
-        private professorService: ProfessorService
+        private professorService: ProfessorService,
+        private route: ActivatedRoute,
+        private router: Router
     ) {}
 
     ngOnInit(): void {
@@ -56,6 +63,27 @@ export class FacultyRegisterComponent implements OnInit {
             ],
             faculty: ['', [Validators.required]],
         });
+
+        if (this.route.snapshot.params['id']) {
+            this.id = this.route.snapshot.params['id'];
+            this.professorService.getProfessorByID(this.id).subscribe((p) => {
+                this.prof = p;
+                this.setFields();
+                this.btnText = 'Update';
+                this.loaded = true;
+            });
+        } else {
+            this.loaded = true;
+        }
+    }
+
+    setFields(): void {
+        this.name?.setValue(this.prof?.name);
+        this.email?.setValue(this.prof?.email);
+        this.age?.setValue(this.prof?.age);
+        this.phoneNumber?.setValue(this.prof?.phoneNumber);
+        this.nationalID?.setValue(this.prof?.nationalID);
+        this.faculty?.setValue(this.prof?.faculty);
     }
 
     get name() {
@@ -84,11 +112,23 @@ export class FacultyRegisterComponent implements OnInit {
 
     onSubmit(): void {
         if (this.facultyRegisterForm.valid) {
-            const prof: Professor = this.mapFormToProf();
-            this.professorService.addProfessor(prof).subscribe();
-            alert(
-                'Your information have been submitted and are pending approval!'
-            );
+            this.mapFormToProf();
+            if (this.id === 0) {
+                this.professorService.addProfessor(this.prof!).subscribe(() => {
+                    alert(
+                        'Your information has been submitted and are pending approval!'
+                    );
+                    this.router.navigate(['/']);
+                });
+            } else {
+                this.prof!.id = this.id;
+                this.professorService
+                    .updateProfessor(this.prof!)
+                    .subscribe(() => {
+                        alert('Information has been updated!');
+                        this.router.navigate(['admin', 'faculty']);
+                    });
+            }
             this.refreshFields();
         } else {
             this.validateFields();
@@ -102,17 +142,16 @@ export class FacultyRegisterComponent implements OnInit {
         });
     }
 
-    mapFormToProf(): Professor {
-        let prof: Professor = {
+    mapFormToProf(): void {
+        this.prof = {
             nationalID: this.nationalID?.value,
             name: this.name?.value,
             age: this.age?.value,
             email: this.email?.value,
             faculty: this.faculty?.value,
             phoneNumber: this.phoneNumber?.value,
-            approved: false,
+            approved: this.prof?.approved || false,
         };
-        return prof;
     }
 
     refreshFields(): void {
