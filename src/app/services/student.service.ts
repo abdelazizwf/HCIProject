@@ -20,8 +20,23 @@ export class StudentService {
     getStudents(): Observable<Student[]> {
         return this.http.get<Student[]>(this.apiUrl);
     }
+    
+    getStudentByID(id: number): Observable<Student> {
+        let url: string = `${this.apiUrl}/${id}`;
+        return this.http.get<Student>(url);
+    }
 
     addStudent(student: Student): Observable<Student> {
         return this.http.post<Student>(this.apiUrl, student, httpOptions);
+    }
+
+    updateStudent(student: Student): Observable<Student> {
+        const url: string = `${this.apiUrl}/${student.id}`;
+        return this.http.put<Student>(url, student, httpOptions);
+    }
+
+    deleteProfessor(student: Student): Observable<Student> {
+        const url: string = `${this.apiUrl}/${student.id}`;
+        return this.http.delete<Student>(url);
     }
 }
