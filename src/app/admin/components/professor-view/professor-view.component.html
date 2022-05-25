@@ -5,7 +5,7 @@
         </h5>
     </div>
     <div class="container my-3">
-        <div class="row row-cols-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             <app-professor-card
                 *ngFor="let p of unapprovedProfs"
                 [prof]="p"
@@ -20,7 +20,7 @@
         <h5 class="p-3">Approved: {{ approvedProfs?.length || 0 }}</h5>
     </div>
     <div class="container my-3">
-        <div class="row row-cols-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             <app-professor-card
                 *ngFor="let p of approvedProfs"
                 [prof]="p"

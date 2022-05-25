@@ -4,6 +4,7 @@ import { ProfessorViewComponent } from './components/professor-view/professor-vi
 import { StudentViewComponent } from './components/student-view/student-view.component';
 import { FacultyRegisterComponent } from '../components/faculty-register/faculty-register.component';
 import { StudentRegisterComponent } from '../components/student-register/student-register.component';
+import { CourseViewComponent } from './components/course-view/course-view.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
     {
         path: 'studentUpdate/:id',
         component: StudentRegisterComponent,
+    },
+    {
+        path: 'courses',
+        component: CourseViewComponent,
     },
 ];
 

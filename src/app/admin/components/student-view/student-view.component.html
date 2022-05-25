@@ -1,9 +1,11 @@
 <div class="container">
     <div class="bg-warning w-100 my-3">
-        <h5 class="p-3">Pending Approval: {{ unapprovedStudents.length }}</h5>
+        <h5 class="p-3">
+            Pending Approval: {{ unapprovedStudents?.length || 0 }}
+        </h5>
     </div>
     <div class="container my-3">
-        <div class="row row-cols-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             <app-student-card
                 *ngFor="let s of unapprovedStudents"
                 [student]="s"
@@ -15,10 +17,10 @@
         </div>
     </div>
     <div class="bg-info w-100 my-3">
-        <h5 class="p-3">Approved: {{ approvedStudents.length }}</h5>
+        <h5 class="p-3">Approved: {{ approvedStudents?.length || 0 }}</h5>
     </div>
     <div class="container my-3">
-        <div class="row row-cols-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             <app-student-card
                 *ngFor="let s of approvedStudents"
                 [student]="s"

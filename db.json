@@ -5,14 +5,18 @@
       "courseID": "CS50",
       "name": "Introduction to Computer Science",
       "professorID": 1,
-      "creditHours": 4
+      "creditHours": 4,
+      "description": "Tempor elit aute deserunt nisi dolore id esse aliquip exercitation culpa adipisicing. Occaecat do aute consequat veniam incididunt ad aliqua labore ut. Aliquip sunt occaecat officia in eiusmod ex sunt.",
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg"
     },
     {
       "id": 2,
       "courseID": "PHYS101",
       "name": "Physics 1",
       "professorID": 2,
-      "creditHours": 4
+      "creditHours": 4,
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+      "description": "Est adipisicing amet esse eu sit laboris est ullamco est ea ullamco. Ullamco aliquip ea aliquip aliqua do sint laboris. Anim Lorem laborum adipisicing magna esse dolor. Labore elit do qui cupidatat elit nostrud. Enim enim irure eu exercitation in in Lorem esse."
     },
     {
       "id": 3,
@@ -22,7 +26,9 @@
       "creditHours": 3,
       "prerequisites": [
         1
-      ]
+      ],
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+      "description": "Aute excepteur voluptate eu eu labore cillum exercitation velit. Commodo esse irure et dolore dolor et eu velit ut dolor eu nostrud ipsum. Nostrud consequat labore sint ullamco consectetur. Eiusmod nulla adipisicing esse consectetur duis voluptate aliqua excepteur enim voluptate cillum. Excepteur eu et ad reprehenderit cupidatat commodo do minim officia excepteur incididunt. Laborum nisi tempor esse nulla non exercitation non magna consectetur do commodo."
     },
     {
       "id": 4,
@@ -32,18 +38,9 @@
       "creditHours": 4,
       "prerequisites": [
         2
-      ]
-    },
-    {
-      "id": 5,
-      "courseID": "ART305",
-      "name": "Creative Thinking",
-      "professorID": 4,
-      "creditHours": 2,
-      "prerequisites": [
-        1,
-        3
-      ]
+      ],
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+      "description": "Excepteur proident velit id nulla et sit exercitation officia est sint voluptate adipisicing irure sunt. Do duis culpa do ut do. Aliqua officia veniam irure adipisicing pariatur veniam in. Tempor fugiat qui elit eiusmod dolore anim. Anim ullamco veniam do dolor ad dolore ut amet magna quis sit exercitation culpa."
     }
   ],
   "professors": [
