@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title">{{ student.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ student.email }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{ student.phoneNumber }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Level {{ student.level }}</h6>
+        <a (click)="onDelete()" class="card-link btn btn-danger">Delete</a>
+        <a
+            (click)="onApprove()"
+            class="card-link btn btn-success"
+            *ngIf="showApprove"
+            >Approve</a
+        >
+    </div>
+</div>

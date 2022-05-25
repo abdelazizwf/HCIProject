@@ -20,7 +20,7 @@ export class StudentService {
     getStudents(): Observable<Student[]> {
         return this.http.get<Student[]>(this.apiUrl);
     }
-    
+
     getStudentByID(id: number): Observable<Student> {
         let url: string = `${this.apiUrl}/${id}`;
         return this.http.get<Student>(url);
@@ -35,7 +35,7 @@ export class StudentService {
         return this.http.put<Student>(url, student, httpOptions);
     }
 
-    deleteProfessor(student: Student): Observable<Student> {
+    deleteStudent(student: Student): Observable<Student> {
         const url: string = `${this.apiUrl}/${student.id}`;
         return this.http.delete<Student>(url);
     }

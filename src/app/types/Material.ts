@@ -1,6 +1,7 @@
 export interface Material {
     id: number;
-    materialID: string;
-    name: string;
-    
+    title: string;
+    description?: string;
+    link: string;
+    courseID: number;
 }

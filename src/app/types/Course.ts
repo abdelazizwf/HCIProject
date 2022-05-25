@@ -6,4 +6,5 @@ export interface Course {
     name: string;
     professorID: number;
     creditHours: number;
+    prerequisites?: number[];
 }
