@@ -117,23 +117,14 @@
       ]
     },
     {
-      "id": 2,
       "nationalID": "30105110102168",
       "name": "Ahmed Tarek",
       "age": 20,
       "email": "Ahmed.tarek@gmail.com",
-      "phoneNumber": "01065494523",
-      "approved": true,
       "level": 1,
-      "registeredCourses": [
-        2,
-        3,
-        4,
-        5
-      ],
-      "completedCourses": [
-        1
-      ]
+      "phoneNumber": "01065494524",
+      "approved": true,
+      "id": 2
     },
     {
       "id": 3,
@@ -443,6 +434,16 @@
       "phoneNumber": "01012345678",
       "approved": false,
       "id": 21
+    },
+    {
+      "nationalID": "12345678912345",
+      "name": "Abdelaziz Farahat",
+      "age": 84,
+      "email": "abdelaziz.w.f@gmail.com",
+      "level": 3,
+      "phoneNumber": "01012345678",
+      "approved": false,
+      "id": 22
     }
   ],
   "materials": [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Student } from 'src/app/types/Student';
 import { StudentService } from '../../services/student.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-student-register',
@@ -10,10 +11,16 @@ import { StudentService } from '../../services/student.service';
 })
 export class StudentRegisterComponent implements OnInit {
     studentRegisterForm!: FormGroup;
+    id: number = 0;
+    btnText: string = 'Register';
+    student?: Student;
+    loaded: boolean = false;
 
     constructor(
         private formBuilder: FormBuilder,
-        private studentService: StudentService
+        private studentService: StudentService,
+        private route: ActivatedRoute,
+        private router: Router
     ) {}
 
     ngOnInit(): void {
@@ -59,6 +66,27 @@ export class StudentRegisterComponent implements OnInit {
                 [Validators.required, Validators.min(1), Validators.max(4)],
             ],
         });
+
+        if (this.route.snapshot.params['id']) {
+            this.id = this.route.snapshot.params['id'];
+            this.studentService.getStudentByID(this.id).subscribe((s) => {
+                this.student = s;
+                this.setFields();
+                this.btnText = 'Update';
+                this.loaded = true;
+            });
+        } else {
+            this.loaded = true;
+        }
+    }
+
+    setFields(): void {
+        this.name?.setValue(this.student?.name);
+        this.email?.setValue(this.student?.email);
+        this.age?.setValue(this.student?.age);
+        this.phoneNumber?.setValue(this.student?.phoneNumber);
+        this.nationalID?.setValue(this.student?.nationalID);
+        this.level?.setValue(this.student?.level);
     }
 
     get name() {
@@ -87,11 +115,24 @@ export class StudentRegisterComponent implements OnInit {
 
     onSubmit(): void {
         if (this.studentRegisterForm.valid) {
-            const student: Student = this.mapFormToStudent();
-            this.studentService.addStudent(student).subscribe();
-            alert(
-                'Your information have been submitted and are pending approval!'
-            );
+            this.mapFormToStudent();
+            if (this.id === 0) {
+                this.studentService.addStudent(this.student!).subscribe(() => {
+                    alert(
+                        'Your information have been submitted and are pending approval!'
+                    );
+                    this.router.navigate(['/']);
+                });
+            } else {
+                this.student!.id = this.id;
+                this.studentService
+                    .updateStudent(this.student!)
+                    .subscribe(() => {
+                        alert('Information has been updated!');
+                        this.router.navigate(['admin', 'students']);
+                    });
+            }
+
             this.refreshFields();
         } else {
             this.validateFields();
@@ -105,17 +146,16 @@ export class StudentRegisterComponent implements OnInit {
         });
     }
 
-    mapFormToStudent(): Student {
-        let prof: Student = {
+    mapFormToStudent(): void {
+        this.student = {
             nationalID: this.nationalID?.value,
             name: this.name?.value,
             age: this.age?.value,
             email: this.email?.value,
             level: this.level?.value,
             phoneNumber: this.phoneNumber?.value,
-            approved: false,
+            approved: this.student?.approved || false,
         };
-        return prof;
     }
 
     refreshFields(): void {

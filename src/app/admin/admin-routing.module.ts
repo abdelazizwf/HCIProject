@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfessorViewComponent } from './components/professor-view/professor-view.component';
 import { StudentViewComponent } from './components/student-view/student-view.component';
 import { FacultyRegisterComponent } from '../components/faculty-register/faculty-register.component';
+import { StudentRegisterComponent } from '../components/student-register/student-register.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'students',
         component: StudentViewComponent,
+    },
+    {
+        path: 'studentUpdate/:id',
+        component: StudentRegisterComponent,
     },
 ];
 

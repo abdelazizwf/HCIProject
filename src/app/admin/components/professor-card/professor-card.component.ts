@@ -11,7 +11,6 @@ export class ProfessorCardComponent implements OnInit {
     @Input() showApprove!: boolean;
     @Output() onApproveProf: EventEmitter<Professor> = new EventEmitter();
     @Output() onDeleteProf: EventEmitter<Professor> = new EventEmitter();
-    @Output() onUpdateProf: EventEmitter<Professor> = new EventEmitter();
 
     constructor() {}
 

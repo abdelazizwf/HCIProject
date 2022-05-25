@@ -1,5 +1,8 @@
 <div class="container my-3" style="max-width: 600px">
-    <form [formGroup]="studentRegisterForm" novalidate>
+    <div class="spinner-border text-dark" role="status" *ngIf="!loaded">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <form [formGroup]="studentRegisterForm" novalidate *ngIf="loaded">
         <div class="form-group">
             <label for="name">Full Name</label>
             <input
@@ -84,7 +87,7 @@
             [disabled]="!studentRegisterForm.valid"
             (click)="onSubmit()"
         >
-            Submit
+            {{ btnText }}
         </button>
     </form>
 </div>

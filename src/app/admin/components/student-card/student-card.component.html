@@ -15,5 +15,11 @@
             *ngIf="showApprove"
             >Approve</a
         >
+        <a
+            [routerLink]="['../', 'studentUpdate', student.id]"
+            class="card-link btn btn-primary"
+            *ngIf="!showApprove"
+            >Update</a
+        >
     </div>
 </div>
