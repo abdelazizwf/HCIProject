@@ -119,7 +119,7 @@ export class StudentRegisterComponent implements OnInit {
             if (this.id === 0) {
                 this.studentService.addStudent(this.student!).subscribe(() => {
                     alert(
-                        'Your information have been submitted and are pending approval!'
+                        'Your information have been submitted and is pending approval!'
                     );
                     this.router.navigate(['/']);
                 });

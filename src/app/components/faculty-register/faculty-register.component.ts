@@ -116,7 +116,7 @@ export class FacultyRegisterComponent implements OnInit {
             if (this.id === 0) {
                 this.professorService.addProfessor(this.prof!).subscribe(() => {
                     alert(
-                        'Your information has been submitted and are pending approval!'
+                        'Your information has been submitted and is pending approval!'
                     );
                     this.router.navigate(['/']);
                 });

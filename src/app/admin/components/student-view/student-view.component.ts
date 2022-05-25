@@ -29,20 +29,22 @@ export class StudentViewComponent implements OnInit {
     }
 
     approveStudent(student: Student): void {
-        this.studentService.updateStudent(student).subscribe();
-        this.unapprovedStudents = this.unapprovedStudents.filter(
-            (s) => s.id !== student.id
-        );
-        this.approvedStudents.push(student);
+        this.studentService.updateStudent(student).subscribe(() => {
+            this.unapprovedStudents = this.unapprovedStudents.filter(
+                (s) => s.id !== student.id
+            );
+            this.approvedStudents.push(student);
+        });
     }
 
     deleteStudent(student: Student): void {
-        this.studentService.deleteStudent(student).subscribe();
-        this.unapprovedStudents = this.unapprovedStudents.filter(
-            (s) => s.id !== student.id
-        );
-        this.approvedStudents = this.approvedStudents.filter(
-            (s) => s.id !== student.id
-        );
+        this.studentService.deleteStudent(student).subscribe(() => {
+            this.unapprovedStudents = this.unapprovedStudents.filter(
+                (s) => s.id !== student.id
+            );
+            this.approvedStudents = this.approvedStudents.filter(
+                (s) => s.id !== student.id
+            );
+        });
     }
 }

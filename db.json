@@ -424,16 +424,6 @@
     },
     {
       "nationalID": "12345678912345",
-      "name": "Zoom One Two",
-      "age": 21,
-      "email": "abdelaziz20191703020@cis.asu.edu.eg",
-      "level": 3,
-      "phoneNumber": "01012345678",
-      "approved": false,
-      "id": 21
-    },
-    {
-      "nationalID": "12345678912345",
       "name": "Abdelaziz Farahat",
       "age": 84,
       "email": "abdelaziz.w.f@gmail.com",
