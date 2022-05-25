@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'addCourse',
         component: CourseFormComponent,
     },
+    {
+        path: 'courseUpdate/:id',
+        component: CourseFormComponent,
+    },
 ];
 
 @NgModule({

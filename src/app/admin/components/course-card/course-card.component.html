@@ -28,7 +28,13 @@
                 >
                     Delete
                 </button>
-                <button type="button" class="btn btn-primary">Update</button>
+                <a
+                    type="button"
+                    class="btn btn-primary"
+                    [routerLink]="['../courseUpdate', course.id]"
+                >
+                    Update
+                </a>
             </div>
         </div>
     </div>

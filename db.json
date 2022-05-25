@@ -1,13 +1,13 @@
 {
   "courses": [
     {
-      "id": 1,
       "courseID": "CS50",
       "name": "Introduction to Computer Science",
+      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+      "description": "Tempor elit aute deserunt nisi dolore id esse aliquip exercitation culpa adipisicing. Occaecat do aute consequat veniam incididunt ad aliqua labore ut. Aliquip sunt occaecat officia in eiusmod ex sunt.",
       "professorID": 1,
       "creditHours": 4,
-      "description": "Tempor elit aute deserunt nisi dolore id esse aliquip exercitation culpa adipisicing. Occaecat do aute consequat veniam incididunt ad aliqua labore ut. Aliquip sunt occaecat officia in eiusmod ex sunt.",
-      "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg"
+      "id": 1
     },
     {
       "id": 2,
@@ -47,7 +47,7 @@
       "name": "Creative Thinking",
       "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
       "description": "Not now!!",
-      "professorID": 4,
+      "professorID": 2,
       "prerequisites": [
         2,
         3
