@@ -12,7 +12,16 @@ import { MaterialViewComponent } from './components/material-view/material-view.
 import { MaterialCardComponent } from './components/material-card/material-card.component';
 
 @NgModule({
-    declarations: [ProfessorCardComponent, ProfessorViewComponent, StudentCardComponent, StudentViewComponent, CourseViewComponent, CourseCardComponent, MaterialViewComponent, MaterialCardComponent],
+    declarations: [
+        ProfessorCardComponent,
+        ProfessorViewComponent,
+        StudentCardComponent,
+        StudentViewComponent,
+        CourseViewComponent,
+        CourseCardComponent,
+        MaterialViewComponent,
+        MaterialCardComponent,
+    ],
     imports: [CommonModule, AdminRoutingModule],
 })
 export class AdminModule {}

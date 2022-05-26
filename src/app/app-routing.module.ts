@@ -20,7 +20,12 @@ const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+    },
+    {
+        path: 'faculty',
+        loadChildren: () =>
+            import('./faculty/faculty.module').then((m) => m.FacultyModule),
     },
 ];
 

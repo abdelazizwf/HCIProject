@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        {{ course.courseID }}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong
+                ><a [href]="material.link">{{ material.title }}</a></strong
+            >
+        </li>
+        <li class="list-group-item text-muted" *ngIf="material.description">
+            {{ material.description }}
+        </li>
+    </ul>
+    <div class="card-footer">
+        <a class="mx-2" [routerLink]="['..', 'materialUpdate', material.id]"
+            >Update</a
+        >
+        <a (click)="onDelete()" class="mx-2">Delete</a>
+    </div>
+</div>
