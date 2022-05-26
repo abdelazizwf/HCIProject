@@ -13,4 +13,7 @@
         (onEnrollCourse)="enrollCourse(course)"
         class="mx-3"
     ></app-course-card>
+    <p class="mx-auto text-aligned-center" *ngIf="courses.length === 0">
+        No Courses Available Right Now!
+    </p>
 </div>

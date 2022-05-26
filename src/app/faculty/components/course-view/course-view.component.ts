@@ -10,8 +10,9 @@ import { ProfessorService } from '../../../services/professor.service';
     styleUrls: [],
 })
 export class CourseViewComponent implements OnInit {
+    id: number = 3;
     courses!: Course[]; // filter by assigned course
-    profs!: Professor[]; // set to be one prof
+    prof!: Professor;
 
     constructor(
         private courseService: CourseService,
@@ -19,15 +20,18 @@ export class CourseViewComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.courseService.getCourses().subscribe((c) => (this.courses = c));
-        this.professorService
-            .getProfessors()
-            .subscribe((p) => (this.profs = p));
+        this.courseService.getCourses().subscribe((c) => {
+            this.courses = c;
+            this.professorService.getProfessorByID(this.id).subscribe((p) => {
+                this.prof = p;
+                this.filterCourses();
+            });
+        });
     }
 
-    getProfByID(id: number): Professor {
-        return this.profs.find((value) => value.id === id)!;
+    filterCourses(): void {
+        this.courses = this.courses.filter(
+            (c) => c.professorID === this.prof.id
+        );
     }
-
-    filterCourses(): void {}
 }

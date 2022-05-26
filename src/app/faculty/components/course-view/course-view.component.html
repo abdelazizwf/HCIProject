@@ -8,7 +8,7 @@
     <app-course-card
         *ngFor="let course of courses"
         [course]="course"
-        [prof]="getProfByID(course.professorID)"
+        [prof]="prof"
         class="mx-3"
     ></app-course-card>
 </div>

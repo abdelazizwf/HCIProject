@@ -487,10 +487,10 @@
       "courseID": 3
     },
     {
-      "id": 7,
+      "courseID": 4,
       "title": "Lecture 6 Video",
       "link": "https://www.youtube.com",
-      "courseID": 4
+      "id": 7
     },
     {
       "id": 8,

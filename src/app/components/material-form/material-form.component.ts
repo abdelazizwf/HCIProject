@@ -12,6 +12,7 @@ import { MaterialService } from '../../services/material.service';
     styleUrls: [],
 })
 export class MaterialFormComponent implements OnInit {
+    profID: number = 3;
     id: number = 0;
     courseForm!: FormGroup;
     btnText: string = 'Add';
@@ -28,7 +29,14 @@ export class MaterialFormComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.courseService.getCourses().subscribe((cs) => (this.courses = cs));
+        this.courseService.getCourses().subscribe((cs) => {
+            this.courses = cs;
+            if (this.profID > 0) {
+                this.courses = this.courses.filter(
+                    (c) => c.professorID === this.profID
+                );
+            }
+        });
 
         this.courseForm = this.formBuilder.group({
             title: ['', [Validators.required, Validators.maxLength(128)]],
