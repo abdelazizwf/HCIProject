@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FacultyRegisterComponent } from './components/faculty-register/faculty-register.component';
 import { AdminModule } from './admin/admin.module';
 import { CourseFormComponent } from './components/course-form/course-form.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { CourseFormComponent } from './components/course-form/course-form.compon
         StudentRegisterComponent,
         FacultyRegisterComponent,
         CourseFormComponent,
+        LoginComponent,
     ],
     imports: [
         BrowserModule,
