@@ -67,11 +67,7 @@
                 (change)="changeProf($event)"
             >
                 <option value="0">Choose Professor</option>
-                <option
-                    *ngFor="let p of profs"
-                    [value]="p.id"
-                    selected="{{ course?.courseID === p.id }}"
-                >
+                <option *ngFor="let p of profs" [value]="p.id">
                     {{ p.name }} [{{ p.email }}]
                 </option>
             </select>

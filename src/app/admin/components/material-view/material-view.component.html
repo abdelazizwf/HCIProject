@@ -4,7 +4,7 @@
             <h4 class="mx-4">Materials</h4>
         </div>
         <div class="col-6 col-sm-2 offset-md-6">
-            <a class="btn btn-success" routerLink="/admin/addCourse"
+            <a class="btn btn-success" routerLink="/admin/addMaterial"
                 >Add Material</a
             >
         </div>
@@ -16,6 +16,7 @@
             *ngFor="let mat of materials"
             [material]="mat"
             [course]="getCourse(mat.courseID)"
+            (onDeleteMat)="deleteMat(mat)"
         ></app-material-card>
     </div>
 </div>

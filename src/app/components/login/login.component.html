@@ -1,8 +1,5 @@
 <div class="container my-3" style="max-width: 600px">
-    <div class="spinner-border text-dark" role="status" *ngIf="!loading">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <form [formGroup]="loginForm" novalidate *ngIf="loading">
+    <form [formGroup]="loginForm" novalidate>
         <div class="form-group">
             <label for="email">Email Address</label>
             <input

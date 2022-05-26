@@ -102,7 +102,6 @@ export class CourseFormComponent implements OnInit {
     onSubmit(): void {
         if (this.courseForm.valid) {
             this.mapFormToCourse();
-            console.log(this.course);
             if (this.id === 0) {
                 this.courseService.addCourse(this.course!).subscribe(() => {
                     alert('Course has been added!');

@@ -34,4 +34,15 @@ export class MaterialViewComponent implements OnInit {
         });
         return c;
     }
+
+    deleteMat(mat: Material) {
+        this.materialService
+            .deleteMaterial(mat)
+            .subscribe(
+                () =>
+                    (this.materials = this.materials.filter(
+                        (m) => m.id !== mat.id
+                    ))
+            );
+    }
 }

@@ -468,10 +468,11 @@
       "courseID": 2
     },
     {
-      "id": 4,
+      "courseID": 1,
       "title": "General Exercises",
       "link": "https://www.youtube.com",
-      "courseID": 1
+      "description": "LOLZ",
+      "id": 4
     },
     {
       "id": 5,

@@ -13,6 +13,7 @@ import { FacultyRegisterComponent } from './components/faculty-register/faculty-
 import { AdminModule } from './admin/admin.module';
 import { CourseFormComponent } from './components/course-form/course-form.component';
 import { LoginComponent } from './components/login/login.component';
+import { MaterialFormComponent } from './components/material-form/material-form.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
         FacultyRegisterComponent,
         CourseFormComponent,
         LoginComponent,
+        MaterialFormComponent,
     ],
     imports: [
         BrowserModule,

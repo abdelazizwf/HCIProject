@@ -7,6 +7,7 @@ import { StudentRegisterComponent } from '../components/student-register/student
 import { CourseViewComponent } from './components/course-view/course-view.component';
 import { CourseFormComponent } from '../components/course-form/course-form.component';
 import { MaterialViewComponent } from './components/material-view/material-view.component';
+import { MaterialFormComponent } from '../components/material-form/material-form.component';
 
 const routes: Routes = [
     {
@@ -40,6 +41,14 @@ const routes: Routes = [
     {
         path: 'materials',
         component: MaterialViewComponent,
+    },
+    {
+        path: 'addMaterial',
+        component: MaterialFormComponent,
+    },
+    {
+        path: 'materialUpdate/:id',
+        component: MaterialFormComponent,
     },
 ];
 
