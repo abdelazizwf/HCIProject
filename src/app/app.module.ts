@@ -14,6 +14,7 @@ import { AdminModule } from './admin/admin.module';
 import { CourseFormComponent } from './components/course-form/course-form.component';
 import { LoginComponent } from './components/login/login.component';
 import { MaterialFormComponent } from './components/material-form/material-form.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { MaterialFormComponent } from './components/material-form/material-form.
         CourseFormComponent,
         LoginComponent,
         MaterialFormComponent,
+        HomeComponent,
     ],
     imports: [
         BrowserModule,
