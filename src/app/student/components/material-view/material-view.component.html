@@ -1,0 +1,21 @@
+<div class="container my-3">
+    <div class="row align-items-center">
+        <div class="col-6 col-sm-4">
+            <h4 class="mx-4">Materials</h4>
+        </div>
+        <div class="col-6 col-sm-2 offset-md-6">
+            <a class="btn btn-success" routerLink="/faculty/addMaterial"
+                >Add Material</a
+            >
+        </div>
+    </div>
+    <hr />
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <app-material-card
+            class="col my-2"
+            *ngFor="let mat of materials"
+            [material]="mat"
+            [course]="getCourse(mat.courseID)"
+        ></app-material-card>
+    </div>
+</div>
