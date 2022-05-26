@@ -21,8 +21,18 @@
                     type="button"
                     class="btn btn-primary"
                     [routerLink]="['..', 'materials', course.id]"
+                    *ngIf="!enroll"
                 >
                     View Materials
+                </a>
+                <a
+                    type="button"
+                    class="btn btn-primary"
+                    (click)="onEnroll()"
+                    [routerLink]="['..', 'materials', course.id]"
+                    *ngIf="enroll"
+                >
+                    Enroll
                 </a>
             </div>
         </div>

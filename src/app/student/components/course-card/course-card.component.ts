@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Professor } from '../../../types/Professor';
 import { Course } from '../../../types/Course';
 
@@ -10,8 +10,14 @@ import { Course } from '../../../types/Course';
 export class CourseCardComponent implements OnInit {
     @Input() course!: Course;
     @Input() prof!: Professor;
+    @Input() enroll: boolean = false;
+    @Output() onEnrollCourse: EventEmitter<Course> = new EventEmitter();
 
     constructor() {}
 
     ngOnInit(): void {}
+
+    onEnroll(): void {
+        this.onEnrollCourse.emit(this.course);
+    }
 }
